@@ -34,3 +34,13 @@ function effacer() {
         document.body.style.backgroundColor = "green"
     }
 }
+
+function calculernotes() {
+    let n1 = (prompt("Note 1 :"));
+    let n2 = (prompt("Note 2 :"));
+    let n3 = (prompt("Note 3 :"));
+
+    let somme = Number(n1) + Number(n2) + Number(n3);
+    let moyenne = somme / 3;
+    document.getElementById("message").textContent = "Somme : " + somme +" - Moyenne : " + moyenne;
+    }
