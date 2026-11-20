@@ -1,38 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-	<title></title>
+<meta charset="UTF-8">
+<title>Sommaire de mes TPs</title>
+<link rel="stylesheet" href="index.css">
 </head>
-<body bgcolor="FFD6B8">
-<h1> Sommaire de mes tps </h1>
-<a href="sio.html"> projet 1 </a> <br>
-<a href="projet2.html"> projet 2 </a> 
-<br>
-<a href="pageprincipale.html"> projet 3 </a> 
-<br>
-<a href="tpadmin.pdf"> projet 4 </a>
-<br>
-<a href="projet5.html"> projet 5 </a> 
-<br>
-<a href="Administration postes de travail P3 sara.pdf"> projet 6 </a>
-<br>
-<a href="ajout_vehicule.html"> projet 7
-	<br>
-	<a href="projet8.html"> projet 8
-		<br>
-		<a href="projet9.html"> projet 9
- </a>  
- <br>
- <a href="projet10.html"> projet 10</a>
- <br>
- <a href="projet11.html"> projet 11</a>
-<br>
-<a href="projet12.html"> projet 12</a>
-<br>
-<a href="projet13.pdf"> projet 13 </a>
-<br>
-<a href="projet15.html"> projet 15 </a>
-		<br>
-		<a href="projet16.html"> projet 16 </a>
+<body>
+
+<h1>Sommaire de mes TP</h1>
+
+<input type="text" id="recherche" class="recherche" placeholder="Rechercher un projet...">
+
+<div class="grille">
+<a href="sio.html">Projet 1</a>
+<a href="projet2.html">Projet 2</a>
+<a href="pageprincipale.html">Projet 3</a>
+<a href="tpadmin.pdf">Projet 4</a>
+<a href="projet5.html">Projet 5</a>
+<a href="Administration postes de travail P3 sara.pdf">Projet 6</a>
+<a href="ajout_vehicule.html">Projet 7</a>
+<a href="projet8.html">Projet 8</a>
+<a href="projet9.html">Projet 9</a>
+<a href="projet10.html">Projet 10</a>
+<a href="projet11.html">Projet 11</a>
+<a href="projet12.html">Projet 12</a>
+<a href="projet13.pdf">Projet 13</a>
+<a href="projet15.html">Projet 15</a>
+<a href="projet16.html">Projet 16</a>
+</div>
+
+<script>
+const input = document.getElementById("recherche");
+const liens = document.querySelectorAll(".grille a");
+
+input.addEventListener("input", () => {
+const texte = input.value.toLowerCase().trim();
+liens.forEach((lien) => {
+const visible = lien.textContent.toLowerCase().includes(texte);
+lien.style.display = visible ? "flex" : "none";
+});
+});
+</script>
+
 </body>
 </html>
